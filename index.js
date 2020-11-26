@@ -122,6 +122,8 @@ app.post('/callback', (req, res) => {
   });
 })
 
+app.use('/api', require('./Routes/paymentroute'));
+
 const port = 3008
 app.listen(port, () => {
   console.log(`Server listening on port ${port}`);
